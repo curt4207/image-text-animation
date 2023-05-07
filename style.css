@@ -1,0 +1,88 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+:root,
+:root.light {
+  --bg-color: #f0efef;
+  --text-color: rgb(21, 44, 67);
+}
+:root.dark {
+  --bg-color: #080808;
+  --text-color: #53bbfc;
+}
+:root {
+  --mom: url(mom.jpg);
+
+  --Darkness1: url(Darkness1.JPG);
+  --Darkness2: url(Darkness2.JPG);
+  --Darkness3: url(Darkness3.JPG);
+}
+
+body {
+    margin-top: 10px;
+    padding: 1px;
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  overflow: hidden;
+  /* filter: brightness(3.5); */
+
+}
+
+p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  height: 80vh;
+  max-width: 600px;
+  background: var(--Darkness1) no-repeat;
+  background-size: 100%;
+  background-position: 50%;
+  overflow: hidden;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: var(--bg-color);
+ font-size: 10px;
+  font-family: Arial, sans-serif;
+
+  animation: reveal 10s ease-in-out infinite;
+
+  
+}
+
+@keyframes reveal {
+  0% {
+      background-size: 0%;
+
+  }
+  20% {
+    /* background-size: 20%; */
+}
+  80% {
+      background-size: 100%;
+  }
+  100% {
+      background-size: 0%; 
+  }
+  
+}
+.theme-btn {
+  width: 3em;
+  height: 3em;
+  padding: 0.5em;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  color: var(--text-color);
+}
+.theme-btn img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
